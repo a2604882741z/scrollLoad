@@ -1,0 +1,33 @@
+/* // 滚动加载父级元素 */
+.ui-scroll-wrapper {
+  position: relative;
+  background: #e0e0e0;
+  overflow-y: hidden;
+}
+/* // 滚动加载内容模块 */
+.ui-scroll-container {
+  height: 100%;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  transition-property: transform;
+  position: relative;
+  z-index: 10;
+  background: #f2f2f2;
+}
+/* // 滚动加载底部状态模块 */
+.ui-scroll-bottom {
+  background: #e0e0e0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 112px;
+  line-height: 112px;
+  font-size: 42px;
+  color: #666;
+  text-align: center;
+  z-index: 2;
+}
+.ui-scroll-bottom p {
+  margin:  0;
+}

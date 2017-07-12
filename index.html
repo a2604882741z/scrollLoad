@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+	<style>
+		body {
+			margin:  0;
+		}
+		.term {
+			line-height: 160px;
+			border-bottom: 1px solid #ccc;
+			font-size: 40px;
+			padding: 0 20px;
+		}
+		body, .wapper {
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+		}
+	</style>
+</head>
+<body>
+	<div class="wapper" id="wapper">
+		<div id="container">
+			<div class="term">test module</div>
+			<div class="term">test module</div>
+			<div class="term">test module</div>
+			<div class="term">test module</div>
+			<div class="term">test module</div>
+			<div class="term">test module</div>
+			<div class="term">test module</div>
+			<div class="term">test module</div>
+			<div class="term">test module</div>
+			<div class="term">test module</div>
+			<div class="term">test module</div>
+		</div>
+	</div>
+	<script src="zepto.js"></script>
+	<script>
+		var scrollload, template;
+		var start = function() {};
+		var define = function(name, depend, fn) {
+			scrollload = fn($);
+		};
+		template = '<div class="term">test module</div><div class="term">test module</div><div class="term">test module</div><div class="term">test module</div>';
+	</script>
+	<script src="scrollload.js"></script>
+	<script>
+		$(function () {
+	    new scrollload({
+	      target: '#wapper',
+	      count: 10,
+	      maxPage: 2,
+	      formPageNum: 1,
+	      callback: function(dtd, num) {
+	      	
+	      	setTimeout(function() {
+	      		$('#container').append(template);
+
+	      		dtd.resolve();
+	      	}, 1000);
+
+	        return dtd.promise();
+	      }
+	    });
+	  });
+	</script>
+</body>
+</html>
