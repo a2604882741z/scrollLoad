@@ -1,4 +1,5 @@
-手机版下拉加载组件，依赖jQuery或者Zepto<br><br>
+<h4>手机版下拉加载组件</h4>
+<p>依赖Zepto以及Deferred组件,通过Deferred控制回调和交互动画的顺序</p><br><br>
 example:<br>
 new scrollload({<br>
 &nbsp;&nbsp;target: domNode,<br>
